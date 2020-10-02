@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -15,6 +14,7 @@
       crossorigin="anonymous"
     />
     <style>
+      /* SCROLLBAR STYLING - TO MAKE IT SLIM */
       /* width */
       ::-webkit-scrollbar {
         width: 5px;
@@ -34,6 +34,8 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #555;
       }
+
+      /* HIDE MESSAGE AREA */
       #messageArea {
         display: none;
       }
@@ -43,7 +45,9 @@
     </style>
     <title>SM CHat Box</title>
   </head>
+
   <body>
+    <!-- NAVBAR:START -->
     <nav class="navbar navbar-dark bg-dark fixed-top">
       <button
         class="navbar-toggler"
@@ -66,8 +70,10 @@
         loading="lazy"
       />
     </nav>
+    <!-- NAVBAR:END -->
 
     <div class="container-fluid" style="margin-top: 60px" id="appcontainer">
+      <!-- ONLINE USERS:START -->
       <div class="collapse" id="navbarToggleExternalContent">
         <h6 class="muted">Online Users</h6>
         <ul
@@ -76,7 +82,9 @@
           style="font-size: 10px"
         ></ul>
       </div>
+      <!-- ONLINE USERS:END -->
 
+      <!-- INITIAL WINDOW ENTER USERNAME:START -->
       <div id="userFormArea" class="row">
         <div class="col-12">
           <form id="userForm">
@@ -95,11 +103,17 @@
           </form>
         </div>
       </div>
+      <!-- INITIAL WINDOW ENTER USERNAME:END -->
+
+      <!-- CHAT LIST:START -->
       <div id="messageArea" class="row" style="margin-bottom: 60px">
         <div class="col-12">
           <ui class="chat list-group" id="chat"></ui>
         </div>
       </div>
+      <!-- CHAT LIST:END -->
+
+      <!-- SEND MESSAGE FORM:START -->
       <div
         id="messageFormArea"
         class="row"
@@ -125,8 +139,10 @@
           </form>
         </div>
       </div>
+      <!-- SEND MESSAGE FORM:END -->
     </div>
 
+    <!-- NECESSARY JS FILES:START -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -143,6 +159,7 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
+    <!-- NECESSARY JS FILES:END -->
 
     <script>
       $(function () {
@@ -175,7 +192,6 @@
               "</b></li>"
           );
           $message.focus();
-          //   window.scrollTo(0, 1000);
           window.scrollTo(0, document.body.scrollHeight);
         });
 
