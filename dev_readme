@@ -1,0 +1,8 @@
+
+1. npm init
+2. npm install socket.io express
+3. create server.js file
+4. for client create index.html file
+5. populate server.js and index.js
+6. run node server.js
+7. open browser localhost:3000
